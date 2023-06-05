@@ -21,7 +21,7 @@ jobs:
       - name: Checkout2
         uses: marocchino/sticky-pull-request-comment@v2
         with:
-         header: <same-header-as-the-step-that-added-the-comment>
+         header: "header_comment"
          hide: true
          hide_classify: "OUTDATED"
          message: |
