@@ -1,0 +1,26 @@
+name: comment test
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    name: Build and analyse default scheme using xcodebuild command
+    runs-on: macos-latest
+#    runs-on: self-hosted
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: comment
+        uses: marocchino/sticky-pull-request-comment@v2
+        with:
+         append: true
+         message: |
+            Test with ${{ aaaaa }}.
+            ```
+            bbbbbaaa111
+            ```
