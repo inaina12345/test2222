@@ -21,7 +21,7 @@ jobs:
         with:
           name: results
           path: output
-          retention-days: 2
+
       
       - uses: actions/download-artifact@v1
         with:
@@ -32,3 +32,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           path: results/results.txt
+          retention-days: 2
