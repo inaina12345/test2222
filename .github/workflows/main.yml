@@ -23,7 +23,7 @@ jobs:
           path: output
           retention-days: 5
       
-      - uses: actions/download-artifact@v3
+      - uses: actions/download-artifact@v1
         with:
           name: results
       - name: comment PR
