@@ -16,12 +16,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: comment
+      - name: Checkout2
         uses: marocchino/sticky-pull-request-comment@v2
         with:
-         append: true
+         hide_and_recreate: true
+         hide_classify: "OUTDATED"
          message: |
-            Test with asdfg.
-            ```
-            bbbbbaaa111
-            ```
+          Release ${{ github.sha }} to <https://pr-${{ github.event.number }}.example.com>
