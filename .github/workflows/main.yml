@@ -17,13 +17,13 @@ jobs:
       - uses: actions/checkout@v1
       - run: mkdir -p output/
       - run: echo "This is fancy a comment" > output/results.txt
-      - uses: actions/upload-artifact@v1
+      - uses: actions/upload-artifact@v3
         with:
           name: results
           path: output
           retention-days: 5
       
-      - uses: actions/download-artifact@v1
+      - uses: actions/download-artifact@v3
         with:
           name: results
       - name: comment PR
