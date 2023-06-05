@@ -22,4 +22,7 @@ jobs:
          hide_and_recreate: true
          hide_classify: "OUTDATED"
          message: |
-          Release ${{ github.sha }} to <https://pr-${{ github.event.number }}.example.com>
+          Release 111
+          eeeeeeasfda
+          sdafasffahjdfkjs
+          dsafhjasdhfajkd
