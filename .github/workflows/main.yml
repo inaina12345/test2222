@@ -21,7 +21,7 @@ jobs:
         with:
          append: true
          message: |
-            Test with ${{ aaaaa }}.
+            Test with asdfg.
             ```
             bbbbbaaa111
             ```
