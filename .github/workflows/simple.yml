@@ -19,8 +19,8 @@ jobs:
     strategy:
       max-parallel: 2
       matrix:
-        node: [18, 20]
-        env: [dev, prod]
+        simulatorid: ["aaa", "bbb", "cccccc"]
+       # env: [dev, prod]
     steps:
       - run: | 
-            echo "${{ matrix.node }}-${{ matrix.env }}"
+            echo "${{ matrix.simulatorid }}"
