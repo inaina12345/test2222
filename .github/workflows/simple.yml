@@ -23,5 +23,4 @@ jobs:
         env: [dev, prod]
     steps:
       - run: | 
-            echo "${{ matrix.node }}"
-            echo "${{ matrix.env }}"
+            echo "${{ matrix.node }}-${{ matrix.env }}"
