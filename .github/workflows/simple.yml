@@ -23,4 +23,4 @@ jobs:
         user: [test, test2]
     steps:
       - run: | 
-            echo "${{ matrix.simulatorid - matrix.user }}"
+            echo "${{ matrix.simulatorid }}" - "${{ matrix.user }}"
