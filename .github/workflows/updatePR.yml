@@ -8,7 +8,7 @@ on:
     inputs:
       ipad:
         #description: 'Major version number'
-        required: true
+        required: false
         default: ''
       iphone:
         #description: 'Minor version number'
@@ -38,9 +38,15 @@ jobs:
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
 
-      - name: Update sample.json
+      - name: Update ipad
+        if: ${{ env.ipad_version != '' }}
         run: |
           jq '.number1 = "${{ env.ipad_version }}"' sample.json > tmp.json && mv tmp.json sample.json
+
+      - name: Update iphone
+        if: ${{ env.iphone_version != '' }}
+        run: |
+          jq '.number2 = "${{ env.iphone_version }}"' sample.json > tmp.json && mv tmp.json sample.json
 
       - name: Commit and push changes
         run: |
