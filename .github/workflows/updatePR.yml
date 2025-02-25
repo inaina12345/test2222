@@ -22,8 +22,8 @@ jobs:
      ipad_version: ${{ github.event.inputs.ipad }}
      iphone_version: ${{ github.event.inputs.iphone }}
     steps:
-#      - name: Checkout repository
-#        uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
       - name: Install jq
         run: sudo apt-get install -y jq
