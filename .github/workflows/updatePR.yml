@@ -4,11 +4,23 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
+    inputs:
+      ipad:
+        #description: 'Major version number'
+        required: true
+        default: ''
+      iphone:
+        #description: 'Minor version number'
+        required: true
+        default: ''
 
 jobs:
   update-and-create-pr:
     runs-on: ubuntu-latest
-
+    env:
+     ipad_version: ${{ github.event.inputs.ipad }}
+     iphone_version: ${{ github.event.inputs.iphone }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
