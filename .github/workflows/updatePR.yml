@@ -12,7 +12,7 @@ on:
         default: ''
       iphone:
         #description: 'Minor version number'
-        required: true
+        required: false
         default: ''
 
 jobs:
