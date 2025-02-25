@@ -40,7 +40,7 @@ jobs:
 
       - name: Update sample.json
         run: |
-          jq '.new = "content"' sample.json > tmp.json && mv tmp.json sample.json
+          jq '.number1 = "${{ env.ipad_version }}"' sample.json > tmp.json && mv tmp.json sample.json
 
       - name: Commit and push changes
         run: |
